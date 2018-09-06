@@ -1,0 +1,33 @@
+$susy: (
+    columns: 12,
+    gutters:1/4,
+    container:1920px,
+    global-box-sizing: border-box,
+    debug:(image:show)
+);
+
+
+
+.container{
+    @include container;
+    @include clearfix;
+    
+    div{
+        height:200px;
+        margin-top:span(1/2);
+        background:shade(#ff00ff, 60%);
+        @include span(4);
+        
+        &:nth-child(3n+3) {
+            @include last;
+        }
+        
+//        div{
+//            height:200px;
+//            background:red;
+//            @include span(2 of 4);
+//            margin-left: span(1 of 4) + gutter(4);
+////            @include push(1 of 4); centeren en margin-left ook centeren
+//        }
+    }
+}

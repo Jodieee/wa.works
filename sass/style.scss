@@ -1,0 +1,25 @@
+@import "template/mixin";
+
+@import "bourbon";
+
+@import "susy"; /*susy versie 2!*/
+
+@import "template/grid";
+
+/*RESET SHEET*/
+
+@import "template/reset";
+
+/*HEADER*/
+
+@import "template/header";
+
+/*FOOTER*/
+
+@import "template/footer";
+
+/*ART*/
+
+@import "template/asciiArt"; 
+
+
