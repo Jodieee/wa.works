@@ -43,7 +43,7 @@ get_header();
 </a>
 
  <a href="companies">
-    <div class="background-Turquoise choice-div float-right">
+    <div class="background-OxfordBlue choice-div float-right">
          <?php
             
            $title = get_field('h1_companies_choice');
@@ -72,23 +72,6 @@ get_header();
 
     </div>
 </a>
-
-<?php
-    
-    
-    if( get_field('wa_mascottes') == 'fuchsiablue' ){
-        ?>
-        <p>this is purple blue idk, you did it!</p>
-<?php
-        
-    } else{
-        ?>
-        <p>Honey you fucked up!</p>
-<?php
-    }
-
-
-?>
 
     <div class="clearfix"></div>
 

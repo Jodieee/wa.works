@@ -20,6 +20,12 @@ function my_assets() { // maak een functie
 add_action( 'wp_enqueue_scripts', 'my_assets' ); // voer de 'my_assets' functie uit
 
 
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page("General settings");
+	
+}
+
 /*REMOVE WYSIWYG EDITOR*/
 
 //remove wysiwyg editor
@@ -51,3 +57,43 @@ function hide_editor() {
     remove_post_type_support('page', 'editor');
   }
 }
+
+
+
+/*Custom post type blog*/
+function create_post_type() {
+    register_post_type( 'blog', // naam voor query in bijvoorbeeld loop
+        array(
+            'labels' => array( // naam zoals zichtbaar in specieke admin-schermen
+                'name' => __( 'Blog' ),
+                'singular_name' => __( 'Blog' )
+            ),
+            'public' => true,
+            'menu_icon'   => 'dashicons-editor-quote',// zichtbaar in admin?
+        )
+    );
+}
+add_action( 'init', 'create_post_type' );
+
+
+//remove comments
+
+// Removes from admin menu
+add_action( 'admin_menu', 'my_remove_admin_menus' );
+function my_remove_admin_menus() {
+    remove_menu_page( 'edit-comments.php' );
+}
+// Removes from post and pages
+add_action('init', 'remove_comment_support', 100);
+
+function remove_comment_support() {
+    remove_post_type_support( 'post', 'comments' );
+    remove_post_type_support( 'page', 'comments' );
+}
+// Removes from admin bar
+function mytheme_admin_bar_render() {
+    global $wp_admin_bar;
+    $wp_admin_bar->remove_menu('comments');
+}
+add_action( 'wp_before_admin_bar_render', 'mytheme_admin_bar_render' );
+
