@@ -1,13 +1,4 @@
-<?php
-/**
- * Template part for displaying a message that posts cannot be found
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package WA.works
- */
 
-?>
 
 <section class="no-results not-found">
 	<header class="page-header">
@@ -21,7 +12,7 @@
 			printf(
 				'<p>' . wp_kses(
 					/* translators: 1: link to WP admin new post page. */
-					__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'wa-works' ),
+					__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'jodiesdesign' ),
 					array(
 						'a' => array(
 							'href' => array(),

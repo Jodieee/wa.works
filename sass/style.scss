@@ -5,6 +5,8 @@
 @import "susy"; /*susy versie 2!*/
 
 @import "template/grid";
+@import "template/colors";
+@import "template/fonts";
 
 /*RESET SHEET*/
 
@@ -13,6 +15,9 @@
 /*HEADER*/
 
 @import "template/header";
+
+/*Choice page styling*/
+@import "template/choice";
 
 /*FOOTER*/
 
