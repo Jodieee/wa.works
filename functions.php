@@ -26,6 +26,95 @@ if( function_exists('acf_add_options_page') ) {
 	
 }
 
+/*hide all widgets dashboard*/
+function remove_dashboard_widgets() {
+    global $wp_meta_boxes;
+ 
+    unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_quick_press']);
+    unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_incoming_links']);
+    unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_right_now']);
+    unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_plugins']);
+    unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_recent_drafts']);
+    unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_recent_comments']);
+    unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_primary']);
+    unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary']);
+    unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_activity']);
+ 
+}
+ 
+add_action('wp_dashboard_setup', 'remove_dashboard_widgets' );
+
+
+
+    
+    
+/*Hide multiple items if role is author*/
+
+if(user_can( $current_user, 'author' )){ 
+    
+ 
+    
+    add_action( 'admin_menu', 'remove_menu_links' );
+    function remove_menu_links() {
+        
+    remove_menu_page( 'tools.php' ); //tools
+        /*remove general settings for author role*/
+
+        remove_menu_page('index.php'); //dashboard
+
+    global $submenu;
+
+    // Remove media for non-admins
+    if( !current_user_can('manage_options') )
+        remove_menu_page('upload.php'); //media
+        
+
+    // Still need to update cap requirements even when hidden
+    foreach( $submenu['upload.php'] as $position => $data ) {
+        $submenu['upload.php'][$position][1] = 'manage_options';
+    }
+}
+    
+    
+}
+
+
+/*Hide multiple items if role is editor*/
+
+if(user_can( $current_user, 'editor' )){ 
+    
+ 
+    
+    add_action( 'admin_menu', 'remove_menu_links' );
+    function remove_menu_links() {
+        
+    remove_menu_page( 'tools.php' ); //tools
+        /*remove general settings for author role*/
+
+        remove_menu_page('index.php'); //dashboard
+
+    global $submenu;
+
+    // Remove media for non-admins
+    if( !current_user_can('manage_options') )
+        remove_menu_page('upload.php'); //media
+        
+        remove_menu_page('admin.php?page=acf-options'); //general settings
+        
+
+    // Still need to update cap requirements even when hidden
+    foreach( $submenu['upload.php'] as $position => $data ) {
+        $submenu['upload.php'][$position][1] = 'manage_options';
+    }
+}
+    
+    
+}
+
+
+ 
+
+
 /*REMOVE WYSIWYG EDITOR*/
 
 //remove wysiwyg editor
@@ -90,7 +179,17 @@ function remove_comment_support() {
     remove_post_type_support( 'post', 'comments' );
     remove_post_type_support( 'page', 'comments' );
 }
-// Removes from admin bar
+
+/*hide posts from admin*/
+
+function post_remove ()      //creating functions post_remove for removing menu item
+        { 
+     remove_menu_page('edit.php');
+        }
+
+        add_action('admin_menu', 'post_remove');   //adding action for triggering function call
+
+// Removes comments from admin bar
 function mytheme_admin_bar_render() {
     global $wp_admin_bar;
     $wp_admin_bar->remove_menu('comments');
