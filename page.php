@@ -5,6 +5,11 @@ get_header();
 
 <header>
     
+ <?php  
+    
+    
+    ?>
+    
 </header>
 
 
@@ -17,27 +22,23 @@ get_header();
 
             if( !empty($title) ){ ?>
         
-                <h1 class="h1_choice tk_bree"><?php the_field('h1_candidates_choice'); ?></h1>
-  
-        <?php
-                                }
-
-        ?>
-    
+              <div>
+                  <h1 class="h1_choice tk_bree"><?php the_field('h1_candidates_choice'); ?></h1>
+              </div>
          
-         <?php
-            
-           $candidates = get_field('candidates_photo_choice');
-
-            if( !empty($candidates) ){ ?>
-        
-                <img src="<?php echo $candidates['url']; ?>" alt="<?php echo $candidates['alt']; ?>" />
-  
+         
         <?php
                                 }
 
         ?>
     
+         <?php
+    
+                $color = get_field('wa_mascottes_choice_candidates');
+                $mascotte = 'WA-' . $color . '.png';
+                ?>
+                <img src="<?php echo get_template_directory_uri() . '/img/' . $mascotte;  ?>" />
+
     </div>
 
 </a>
@@ -50,25 +51,19 @@ get_header();
 
             if( !empty($title) ){ ?>
         
+            <div>
                 <h1 class="h1_choice tk_bree"><?php the_field('h1_companies_choice'); ?></h1>
-  
+            </div>
+                
+                
         <?php
                                 }
 
-        ?>
 
-           <?php
-            
-           $companies = get_field('companies_photo_choice');
-
-            if( !empty($companies) ){ ?>
-        
-                <img src="<?php echo $companies['url']; ?>" alt="<?php echo $companies['alt']; ?>" />
-  
-        <?php
-                                }
-
-        ?>
+            $color = get_field('wa_mascottes_choice_companies');
+                $mascotte = 'WA-' . $color . '.png';
+                ?>
+                <img src="<?php echo get_template_directory_uri() . '/img/' . $mascotte;  ?>" />
 
     </div>
 </a>
