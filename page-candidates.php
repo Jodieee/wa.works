@@ -11,4 +11,7 @@ include('menu-candidates.php');
 </main>
 
 	<?php
+
+include('footer-candidates.php');
+
 wp_footer();
