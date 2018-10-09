@@ -1,4 +1,4 @@
-<footer class="background-ViolentViolet">
+<footer class="background-OxfordBlue">
 
     <div class="footer-content-wrapper">
     
@@ -6,7 +6,7 @@
                 <h1>Sign up for our newsletter:</h1>
 
             <input class="input-newsletter background-Gallery" type="text" value="Email Adress"/>
-            <input class="sign-up-newsletter background-FuchsiaBlue" type="submit" value="Sign up" />  
+            <input class="sign-up-newsletter background-Turquoise" type="submit" value="Sign up" />  
         </div>
 
 
@@ -58,4 +58,4 @@
     
     
     </div>
-</footer>
+</footer> 

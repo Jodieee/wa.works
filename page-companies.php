@@ -9,5 +9,8 @@ include('menu-companies.php');
     <h1>page companies</h1>
 </main>
 
+
+
 	<?php
+include('footer-companies.php');
 wp_footer();
