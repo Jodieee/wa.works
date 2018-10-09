@@ -2,7 +2,9 @@
 
 get_header();
 ?>
-
+<?php
+include('menu-companies.php');
+?>
 <main> 
     <h1>page companies</h1>
 </main>

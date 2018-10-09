@@ -92,8 +92,6 @@ nav{
                               margin-bottom: 5px;
                               position: relative;
 
-                              background: #8645C0;
-
                               z-index: 1;
 
                               transform-origin: 4px 0px;
@@ -119,7 +117,6 @@ nav{
                     #menuToggle input:checked ~ span{
                               opacity: 1;
                               transform: rotate(45deg) translate(-2px, -1px);
-                              background: #8645C0;
                                 width:35px;
                             }
 

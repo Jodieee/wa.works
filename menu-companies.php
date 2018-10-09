@@ -1,4 +1,4 @@
-<nav class="background-ViolentViolet">
+<nav class="background-OxfordBlue">
     
     
     <div class="mobile-nav">
@@ -9,11 +9,11 @@
     -->
     <input type="checkbox" />
     
-    <span class="background-FuchsiaBlue"></span>
-    <span class="background-FuchsiaBlue"></span>
-    <span class="background-FuchsiaBlue"></span>
+    <span class="background-Turquoise"></span>
+    <span class="background-Turquoise"></span>
+    <span class="background-Turquoise"></span>
     
-    <ul id="menu" class="background-ViolentViolet">
+    <ul id="menu" class="background-OxfordBlue">
         
         <div>
              <li>
@@ -118,7 +118,7 @@
     
     
    <div>
-    <a class="button-sign-in background-FuchsiaBlue desktop" href="https://app.wa.works/?_ga=2.90907738.1905780514.1538982210-398959901.1535446834"> Log in</a>
+    <a class="button-sign-in background-Turquoise desktop" href="https://app.wa.works/?_ga=2.90907738.1905780514.1538982210-398959901.1535446834"> Log in</a>
     </div> 
     
  
