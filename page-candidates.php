@@ -36,7 +36,7 @@ include('menu-candidates.php');
     
     
 
-    <div id="candidates_how_does_it_work_wrapper">
+       <div id="candidates_how_does_it_work_wrapper" class="background-RadicalRed">
     
         <div></div>
     
@@ -44,6 +44,23 @@ include('menu-candidates.php');
     
     </div>
     
+    
+     <div id="candidates_candidates_wrapper" class="background-BrinkPink">
+    
+    </div>
+    
+       <div id="candidates_listings_wrapper" class="background-Broom">
+    
+    </div>
+    
+    <div id="candidates_blog_wrapper" class="background-SeaBuckthorn">
+    
+    </div>
+    
+    
+    <div id="candidates_team_wrapper" class="background-Shamrock">
+    
+    </div>
     
 </main>
 <div class="clearfix"></div>

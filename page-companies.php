@@ -35,13 +35,32 @@ include('menu-companies.php');
     </div>
     
     
-     <div id="companies_how_does_it_work_wrapper">
+     <div id="companies_how_does_it_work_wrapper" class="background-RadicalRed">
     
         <div></div>
     
     
     
     </div>
+    
+    
+     <div id="companies_companies_wrapper" class="background-BrinkPink">
+    
+    </div>
+    
+       <div id="companies_listings_wrapper" class="background-Broom">
+    
+    </div>
+    
+    <div id="companies_blog_wrapper" class="background-SeaBuckthorn">
+    
+    </div>
+    
+    
+    <div id="companies_team_wrapper" class="background-Shamrock">
+    
+    </div>
+    
 </main>
 
 
