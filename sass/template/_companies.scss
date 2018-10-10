@@ -1,3 +1,213 @@
-main{width:100vw;
-    height:auto;
-    padding-top:80px;}
+main{width:1160px;
+    height:100%;
+    padding-top:80px;
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    
+        #companies_introduction_wrapper{
+           width:100%;
+            height:100%;
+            
+            
+            img.mascotte_introduction{
+                width:550px;
+                height:auto;}
+            
+            
+            div{width:50%;
+                height:500px;
+                
+                h1{
+                    font-size:36px;
+                    max-width: 600px;
+                    text-align: center;
+                    padding-top:120px;
+                    margin-bottom:50px;
+
+
+                }
+                
+                .sign-up-button{
+                        text-decoration: none;
+                        color: #ffffff;
+                        font-size: 30px;
+                        font-family: "bree",sans-serif;
+                        padding: 15px 30px 15px 30px;
+                        border-radius: 8px;
+                    }
+                
+                a{
+                    transition: 0.5s;}
+                a:hover{color: #fd667f;
+                        transition: 0.5s;}
+
+            }
+                
+                
+            }
+        
+    #companies_how_does_it_work_wrapper{
+        height:700px;
+            
+          
+
+            }
+           
+
+    }
+
+
+
+
+
+@media screen and (max-width:1200px){
+        main{width:967px;
+            display: block;
+            margin-left:auto;
+            margin-right:auto;
+
+            #companies_introduction_wrapper{
+                height:100%;
+                div{
+
+                    h1{
+                        font-size:30px;
+                        max-width: 400px;
+                        padding-top:120px;
+
+
+                    }
+                    
+                        
+                     a.sign-up-button{
+                        font-size: 30px;
+                    }
+
+                }
+
+                img.mascotte_introduction{
+                    width:450px;
+
+                }
+
+
+
+
+
+        }
+
+
+
+
+
+    }
+
+    
+    
+}
+
+
+
+
+@media screen and (max-width:900px){
+        main{width:725px;
+             display: block;
+            margin-left:auto;
+            margin-right:auto;
+
+            #companies_introduction_wrapper{
+                div{
+
+                    h1{
+                        font-size:24px;
+                        max-width: 700px;
+                        padding-top:0px;
+                        margin-left: 50%;
+                        transform: translate(-50%);
+                        
+
+
+                    }
+                        
+                     a.sign-up-button{
+                        font-size: 24px;
+                        padding: 13px 27px 13px 27px;
+                    }
+
+                }
+
+                img.mascotte_introduction{
+                    width:350px;
+                    height:auto;
+                    margin-left: 50%;
+                    transform: translate(-50%);
+
+                }
+
+
+
+
+
+        }
+
+
+
+
+
+    }
+
+    
+    
+}
+
+
+@media screen and (max-width:600px){
+        main{width:350px;
+            display: block;
+            margin-left:auto;
+            margin-right:auto;
+
+            #companies_introduction_wrapper{
+                div{
+
+                    h1{
+                        font-size:18px;
+                        max-width: 325px;
+                        padding-top:80px;
+                        margin-left: 50%;
+                        transform: translate(-50%);
+                        
+
+
+                    }
+                    
+                    a.sign-up-button{
+                        font-size: 18px;
+                        padding: 10px 25px 10px 25px;
+                    }
+
+
+                }
+
+                img.mascotte_introduction{
+                    width:275px;
+                    margin-left: 50%;
+                        transform: translate(-50%);
+                }
+
+
+
+
+
+        }
+
+
+
+
+
+    }
+
+    
+    
+}

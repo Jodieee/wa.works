@@ -1,3 +1,5 @@
+<div class="clearfix"></div>
+
 <footer class="background-ViolentViolet">
 
     <div class="footer-content-wrapper">

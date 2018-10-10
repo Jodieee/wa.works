@@ -1,3 +1,5 @@
+<div class="clearfix"></div>
+
 <footer class="background-OxfordBlue">
 
     <div class="footer-content-wrapper">
