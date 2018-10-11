@@ -45,8 +45,6 @@ function remove_dashboard_widgets() {
 add_action('wp_dashboard_setup', 'remove_dashboard_widgets' );
 
 
-
-    
     
 /*Hide multiple items if role is author*/
 

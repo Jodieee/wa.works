@@ -1,5 +1,6 @@
 <div class="clearfix"></div>
 
+<div class="wigglyline-oxfordblue-svg"></div>
 <footer class="background-OxfordBlue">
 
     <div class="footer-content-wrapper">

@@ -3,12 +3,8 @@
 get_header();
 ?>
 
-<?php
-include('menu-candidates.php');
-?>
-
-<div class="content"> 
-    <h1>index.php/blog</h1>
+<main> 
+    <h1>page about</h1>
     
     
      <?php
@@ -40,22 +36,22 @@ if  ( $query->have_posts() ) {
             
         
     </a>
-    <?php
-            }
     
-     
-        
+            
+    <?php
+            } 
+        }
     ?>
  </div> <!--.container sluit hier af -->
 <?php
-
+}
 // Reset Post Data
 wp_reset_postdata();
 
     
 ?>
 
-</div>
+</main>
 
 	<?php
 wp_footer();

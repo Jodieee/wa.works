@@ -1,0 +1,28 @@
+a.thumb{
+    height:350px;
+        margin-top:span(1/2);
+        background:shade(#ff00ff, 60%);
+        @include span(8);
+        display:block;
+        margin-left:auto;
+        margin-right:auto;
+        float:none;
+        
+        
+}
+
+a.thumb2{height:350px;
+        margin-top:span(1/2);
+        background:shade(#ff00ff, 60%);
+        @include span(4);
+        display:block;
+        margin-left:auto;
+        margin-right:auto;
+        float:none;
+    
+    
+    &:nth-child(2n+2) {
+            @include last;
+        }
+}
+

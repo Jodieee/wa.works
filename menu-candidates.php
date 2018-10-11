@@ -1,3 +1,7 @@
+<?php $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>
+
+<?php $path = '/wa-works/'; ?>
+
 <nav class="background-ViolentViolet">
     
     
@@ -17,32 +21,32 @@
     
         <div>
              <li>
-                    <a href="index.php">
+                    <a href="<?php echo $actual_link . '/home'; ?>">
                         <p class="tk_bree">Home</p>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="#candidates_candidates_wrapper">
                         <p class="tk_bree">Candidates</p>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="#candidates_candidates_wrapper">
                         <p class="tk_bree">Companies</p>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="#candidates_listings_wrapper">
                         <p class="tk_bree">Listings</p>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="blog">
                         <p class="tk_bree">Blog</p>
                     </a>
                 </li>
                 <li>
-                    <a href="page-about.php">
+                    <a href="about">
                         <p class="tk_bree">About</p>
                     </a>
                 </li>
@@ -61,45 +65,40 @@
     
     
     <?php
-    $color = get_field('wa_mascottes_choice_candidates', 'option');
+    $color = get_field('wa_mascottes_candidates_menu', 'option');
     
     $mascotte = 'WA-' . $color . '.png';
                 ?>
                 <img src="<?php echo get_template_directory_uri() . '/img/' . $mascotte;  ?>" />
 
-    <?php
-   echo '<pre>';
-		print_r( get_field('wa_mascottes_choice_candidates', 'option') );
-	echo '</pre>';
-?>
     <ul class="desktop">
         <li>
-            <a class="desktop" href="index.php">
+            <a class="desktop" href="<?php echo $path . 'candidates' ?>">
                 <p class="tk_bree">Home</p>
             </a>
         </li>
         <li>
-            <a class="desktop" href="#">
+            <a class="desktop" href="<?php echo $path . 'candidates/#candidates_candidates_wrapper' ?>">
                 <p class="tk_bree">Candidates</p>
             </a>
         </li>
         <li>
-            <a class="desktop" href="#">
+            <a class="desktop" href="<?php echo $path . 'candidates/#candidates_candidates_wrapper' ?>">
                 <p class="tk_bree">Companies</p>
             </a>
         </li>
         <li>
-            <a class="desktop" href="#">
+            <a class="desktop" href="<?php echo $path . 'candidates/#candidates_listings_wrapper' ?>">
                 <p class="tk_bree">Listings</p>
             </a>
         </li>
         <li>
-            <a class="desktop" href="#">
+            <a class="desktop" href="<?php echo $path . 'blog' ?>">
                 <p class="tk_bree">Blog</p>
             </a>
         </li>
         <li>
-            <a class="desktop" href="page-about.php">
+            <a class="desktop" href="<?php echo $path . 'about' ?>">
                 <p class="tk_bree">About</p>
             </a>
         </li>

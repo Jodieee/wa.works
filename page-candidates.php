@@ -6,7 +6,7 @@ get_header();
 <?php
 include('menu-candidates.php');
 ?>
-<main> 
+<div class="content"> 
     
     <div id="candidates_introduction_wrapper">
         
@@ -20,12 +20,11 @@ include('menu-candidates.php');
         </div>
         
         <div class="float-right">
-            <h1><?php the_field('h1_introduction_candidates'); ?><br>
+            <h1><?php the_field('h1_introduction_candidates'); ?><br><br><br>
+                
+                <a class="sign-up-button background-FuchsiaBlue" href="https://app.wa.works/public/signup">Sign up</a>
                 </h1>
 
-
-
-                <a class="sign-up-button background-FuchsiaBlue" href="https://app.wa.works/public/signup">Sign up</a>
         </div>
         
 
@@ -34,35 +33,42 @@ include('menu-candidates.php');
         
     </div>
     
+</div>
     
-
-       <div id="candidates_how_does_it_work_wrapper" class="background-RadicalRed">
     
-        <div></div>
+    <div class="triangle-violentviolet-svg"></div>
+       <div id="candidates_how_does_it_work_wrapper" class="background-ViolentViolet">
+           <div class="content"> </div>
+    
+  
     
     
     
     </div>
+    
+    <div class="saw-svg"></div>
     
     
      <div id="candidates_candidates_wrapper" class="background-BrinkPink">
-    
+    <div class="content"> </div>
     </div>
-    
+    <div class="wigglyline-svg"></div>
        <div id="candidates_listings_wrapper" class="background-Broom">
-    
+    <div class="content"> </div>
     </div>
+    <div class="saw-svg"></div>
     
     <div id="candidates_blog_wrapper" class="background-SeaBuckthorn">
-    
+    <div class="content"> </div>
     </div>
+    <div class="wigglyline-svg"></div>
     
     
     <div id="candidates_team_wrapper" class="background-Shamrock">
-    
+    <div class="content"> </div>
     </div>
     
-</main>
+
 <div class="clearfix"></div>
 	<?php
 

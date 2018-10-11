@@ -1,5 +1,7 @@
 <div class="clearfix"></div>
 
+
+<div class="wigglyline-svg"></div>
 <footer class="background-ViolentViolet">
 
     <div class="footer-content-wrapper">

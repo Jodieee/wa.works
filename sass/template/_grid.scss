@@ -13,6 +13,14 @@ $susy: (
     float:right;
 }
 
+.content{
+    width:1160px;
+    height:100%;
+    padding-top:80px;
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+}
 
 
 div.clearfix{
@@ -30,7 +38,6 @@ div.clearfix{
     @include clearfix;
     
     div{
-        height:200px;
         margin-top:span(1/2);
         background:shade(#ff00ff, 60%);
         @include span(4);

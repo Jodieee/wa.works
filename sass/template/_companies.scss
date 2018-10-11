@@ -1,4 +1,4 @@
-main{width:1160px;
+.content{width:1160px;
     height:100%;
     padding-top:80px;
     display: block;
@@ -163,7 +163,7 @@ main{width:1160px;
 
 
 @media screen and (max-width:600px){
-        main{width:350px;
+        .content{width:350px;
             display: block;
             margin-left:auto;
             margin-right:auto;
@@ -211,3 +211,16 @@ main{width:1160px;
     
     
 }
+
+.wigglyline-oxfordblue-svg{
+    background-image:url("img/Wigglyline-OxfordBlue.svg");
+    width:100%;
+    height:42px;
+}
+
+.triangle-oxfordblue-svg{background-image:url("img/triangle-OxfordBlue.svg");
+    background-size: cover;
+    width:100%;
+    height:500px;}
+
+
