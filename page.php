@@ -3,15 +3,6 @@
 get_header();
 ?>
 
-<header>
-    
- <?php  
-    
-    
-    ?>
-    
-</header>
-
 
  <a href="candidates">
      <div class="background-ViolentViolet choice-div float-left">

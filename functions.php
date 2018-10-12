@@ -45,12 +45,23 @@ function remove_dashboard_widgets() {
 add_action('wp_dashboard_setup', 'remove_dashboard_widgets' );
 
 
+/*order posts blog*/
+
+//WP_Query('orderby=date&order=DESC');
+
     
 /*Hide multiple items if role is author*/
 
 if(user_can( $current_user, 'author' )){ 
     
+    
+    /*hide options page*/
+    add_action('admin_init', 'remove_acf_options_page');
+function remove_acf_options_page() {
+   remove_menu_page('acf-options-general-settings');
+}
  
+
     
     add_action( 'admin_menu', 'remove_menu_links' );
     function remove_menu_links() {
@@ -81,7 +92,11 @@ if(user_can( $current_user, 'author' )){
 
 if(user_can( $current_user, 'editor' )){ 
     
- 
+  /*hide options page*/
+    add_action('admin_init', 'remove_acf_options_page');
+function remove_acf_options_page() {
+   remove_menu_page('acf-options-general-settings');
+}
     
     add_action( 'admin_menu', 'remove_menu_links' );
     function remove_menu_links() {
@@ -120,32 +135,26 @@ if(user_can( $current_user, 'editor' )){
  * Hide editor on specific pages.
  *
  */
-add_action( 'admin_init', 'hide_editor' );
-function hide_editor() {
-  // Get the Post ID.
-  $post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
-  if( !isset( $post_id ) ) return;
-  // Hide the editor on the page titled 'Homepage'
-  $homepgname = get_the_title($post_id);
-  $newsname = get_the_title($post_id);
-  if($homepgname == 'Home'){ 
-    remove_post_type_support('page', 'editor');
-  }
-    if($homepgname == 'About'){ 
-    remove_post_type_support('page', 'editor');
-  }
-    if($homepgname == 'Blog'){ 
-    remove_post_type_support('page', 'editor');
-  }
-  // Hide the editor on a page with a specific page template
-  // Get the name of the Page Template file.
-  $template_file = get_post_meta($post_id, '_wp_page_template', true);
-  if($template_file == 'my-page-template.php'){ // the filename of the page template
-    remove_post_type_support('page', 'editor');
-  }
+function reset_editor()
+{
+     global $_wp_post_type_features;
+
+     $post_type="page";
+     $feature = "editor";
+     if ( !isset($_wp_post_type_features[$post_type]) )
+     {
+
+     }
+     elseif ( isset($_wp_post_type_features[$post_type][$feature]) )
+     unset($_wp_post_type_features[$post_type][$feature]);
 }
 
+add_action("init","reset_editor");
 
+// disable wyswyg for vlogposts
+add_action( 'init', function() {
+    remove_post_type_support( 'blog', 'editor' );
+}, 99);
 
 /*Custom post type blog*/
 function create_post_type() {

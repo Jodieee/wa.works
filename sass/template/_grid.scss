@@ -1,5 +1,5 @@
 $susy: (
-    columns: 12,
+    columns: 8,
     gutters:1/4,
     container:1920px,
     global-box-sizing: border-box,
@@ -42,10 +42,10 @@ div.clearfix{
         background:shade(#ff00ff, 60%);
         @include span(4);
         
-        &:nth-child(3n+3) {
-            @include last;
-        }
-        
+//        &:nth-child(3n+3) {
+//            @include last;
+//        }
+//        
 //        div{
 //            height:200px;
 //            background:red;

@@ -1,7 +1,7 @@
 <div class="clearfix"></div>
 
 
-<div class="wigglyline-svg"></div>
+<div class="wigglyline-svg shape-footer"></div>
 <footer class="background-ViolentViolet">
 
     <div class="footer-content-wrapper">

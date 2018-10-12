@@ -2,7 +2,13 @@
 
 <?php $path = '/wa-works/'; ?>
 
-<nav class="background-ViolentViolet">
+  <?php
+    $backgroundMenu = get_field('background_color_candidates_menu', 'option');
+        
+        ?>
+               
+
+<nav class="<?php echo 'background-' . $backgroundMenu;  ?>">
     
     
     <div class="mobile-nav">
@@ -16,8 +22,10 @@
     <span class="background-FuchsiaBlue"></span>
     <span class="background-FuchsiaBlue"></span>
     <span class="background-FuchsiaBlue"></span>
+      
+
     
-    <ul id="menu" class="background-ViolentViolet">
+    <ul id="menu" class="<?php echo 'background_' . $backgroundMenu;  ?>">
     
         <div>
              <li>

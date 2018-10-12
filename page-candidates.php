@@ -1,6 +1,10 @@
 <?php
 
 get_header();
+
+
+                
+    $backgroundHow = get_field('background_color_candidates_how_does_it_work');
 ?>
 
 <?php
@@ -37,7 +41,7 @@ include('menu-candidates.php');
     
     
     <div class="triangle-violentviolet-svg"></div>
-       <div id="candidates_how_does_it_work_wrapper" class="background-ViolentViolet">
+       <div id="candidates_how_does_it_work_wrapper" class="<?php echo 'background-' . $backgroundHow;  ?>">
            <div class="content"> </div>
     
   
