@@ -25,7 +25,7 @@
       
 
     
-    <ul id="menu" class="<?php echo 'background_' . $backgroundMenu;  ?>">
+    <ul id="menu" class="<?php echo 'background-' . $backgroundMenu;  ?>">
     
         <div>
              <li>

@@ -10,7 +10,7 @@
 <nav class="<?php echo 'background-' . $backgroundMenu;  ?>">
     
     
-    <div class="mobile-nav <?php echo 'background_' . $backgroundMenu;  ?>">
+    <div class="mobile-nav <?php echo 'background-' . $backgroundMenu;  ?>">
   <div id="menuToggle">
     <!--
     A fake / hidden checkbox is used as click reciever,

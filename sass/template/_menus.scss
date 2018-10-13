@@ -4,6 +4,9 @@ nav{z-index: 10;
     height:80px;
     
     
+    .hide-menu-after-click{
+        transform: translate(-100%, 0);
+    }
                         
 
                     #menuToggle{
@@ -223,6 +226,14 @@ nav{z-index: 10;
         display:none!important;
         
     }
+    
+    nav ul.desktop li{
+        padding:28px 15px 28px 10px;
+        
+        a{
+            font-size:20px;
+        }
+    }
 }
 
 @media screen and (max-width: 900px) {
@@ -247,11 +258,11 @@ nav{z-index: 10;
             ul.desktop{
                 display:none;
 
-
+                    
+                    
                
 
                     }
-               
         
     div{
         
