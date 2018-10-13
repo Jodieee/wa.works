@@ -46,5 +46,66 @@ $catagory = get_field('catagory_blogpost');
 
 </main>
 
+
+<div class="previous-next-blogposts content">
+    
+
+        
+        
+            
+    
+         <?php
+        $prev_post = get_previous_post();
+        if (!empty( $prev_post )): ?>
+    
+        <?php
+       $headerPrevious = get_field('header_blogpost', $prev_post->ID); 
+       $titlePrevious = get_field('title_blogpost', $prev_post->ID); 
+       $catagoryPrevious = get_field('catagory_blogpost', $prev_post->ID);
+?>
+            
+              <a class="thumb-previous" style="background-image: url(<?php echo $headerPrevious['url']; ?>); background-size:cover;"  href="<?php echo $prev_post->guid ?>">
+            
+             <?php
+            if( !empty($titlePrevious) ){ ?>
+
+
+            <h1 class="<?php echo 'background-' . $catagoryPrevious;  ?>"><?php echo $titlePrevious; ?></h1>
+
+
+            <?php } ?>
+                <?php
+             the_content(); ?>
+                  </a>
+        <?php endif ?>
+
+     
+     <?php
+        $next_post = get_next_post();
+        if (!empty( $next_post )): ?>
+    
+            <?php
+               $headerNext = get_field('header_blogpost', $next_post->ID); 
+               $titleNext = get_field('title_blogpost', $next_post->ID); 
+               $catagoryNext = get_field('catagory_blogpost', $next_post->ID);
+        ?>
+    
+              <a class="thumb-next" style="background-image: url(<?php echo $headerNext['url']; ?>); background-size:cover;"  href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>">
+            
+            <?php
+            if( !empty($titleNext) ){ ?>
+
+
+            <h1 class="<?php echo 'background-' . $catagoryNext;  ?>"><?php echo $titleNext; ?></h1>
+
+
+            <?php } ?>
+                <?php
+             the_content(); ?>
+                  </a>
+        <?php endif; ?>
+
+</div>
+
 	<?php
 wp_footer();
