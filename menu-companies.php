@@ -2,10 +2,15 @@
 
 <?php $path = '/wa-works/'; ?>
 
-<nav class="background-OxfordBlue">
+   <?php
+    $backgroundMenu = get_field('background_color_companies_menu', 'option');
+        
+        ?>
+
+<nav class="<?php echo 'background-' . $backgroundMenu;  ?>">
     
     
-    <div class="mobile-nav">
+    <div class="mobile-nav <?php echo 'background_' . $backgroundMenu;  ?>">
   <div id="menuToggle">
     <!--
     A fake / hidden checkbox is used as click reciever,
@@ -17,7 +22,7 @@
     <span class="background-Turquoise"></span>
     <span class="background-Turquoise"></span>
     
-    <ul id="menu" class="background-OxfordBlue">
+    <ul id="menu" class="<?php echo 'background_' . $backgroundMenu;  ?>">
     
         <div>
              <li>
@@ -65,17 +70,13 @@
     
     
     <?php
-    $color = get_field('wa_mascottes_choice_companies', 'option');
+    $color = get_field('wa_mascottes_companies_menu', 'option');
     
     $mascotte = 'WA-' . $color . '.png';
                 ?>
                 <img src="<?php echo get_template_directory_uri() . '/img/' . $mascotte;  ?>" />
 
-    <?php
-   echo '<pre>';
-		print_r( get_field('wa_mascottes_choice_companies', 'option') );
-	echo '</pre>';
-?>
+    
     <ul class="desktop">
         <li>
             <a class="desktop" href="<?php echo $path . 'companies' ?>">

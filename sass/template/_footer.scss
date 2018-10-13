@@ -5,6 +5,7 @@
 footer{
     width:100vw;
     height:160px;
+    overflow: hidden;
     
     .footer-content-wrapper{
         max-width: 1168px;
@@ -63,9 +64,10 @@ footer{
 
 
         .mascotte-footer{
-            width:64px;
+            width:260px;
             height:auto;
             float:right;
+            
         }
     }
 }
@@ -126,8 +128,9 @@ footer{
 
 
         .mascotte-footer{
-            margin-left:20px;
-           
+            margin-top:50px;
+            width:300px;
+            height:auto;
         }
     }
 }
@@ -136,11 +139,12 @@ footer{
 
 }
 
-@media screen and (max-width: 600px) {
+
+@media screen and (max-width: 900px) {
    footer{
     
     .footer-content-wrapper{
-        max-width: 500px;
+        max-width: 700px;
     
         div{
 
@@ -165,12 +169,70 @@ footer{
 
 
 
-        .slides{margin-right:28px;
+        .slides{margin-right:20px;
                 padding-top:0px;
                 float:right;
 
             .slide:first-child{
-                padding-left:70px;
+                padding-left:10px;
+            }
+                    
+                    .slide{
+                        float:left;
+                        
+                    
+
+                            .social-media-icons-footer{
+                                width:28px;
+                                height:28px;
+                                float:right;
+                                margin:35px 3px 0px 0px;
+                            }
+                    }
+        }
+
+    }
+}
+
+
+
+}
+
+@media screen and (max-width: 600px) {
+   footer{
+    
+    .footer-content-wrapper{
+        max-width: 350px;
+    
+        div{
+
+                h1{
+                    font-size:14px;}
+
+                .input-newsletter{
+                    width:145px;
+                    height:30px;
+
+
+                }
+                    .sign-up-newsletter{
+                        width:45px;
+                        height:30px;
+                        font-size: 12px;
+
+
+
+                }
+        }
+
+
+
+        .slides{margin-right:20px;
+                padding-top:0px;
+                float:right;
+
+            .slide:first-child{
+                padding-left:10px;
             }
                     
                     .slide{
@@ -189,7 +251,9 @@ footer{
 
 
         .mascotte-footer{
-            margin-left:20px;
+            margin-top:20px;
+            width:120px;
+            height:auto;
            
         }
     }

@@ -1,8 +1,14 @@
+<?php
+    $backgroundMenu = get_field('background_color_candidates_footer', 'option');
+        
+        ?>
+
+
 <div class="clearfix"></div>
 
 
 <div class="wigglyline-svg shape-footer"></div>
-<footer class="background-ViolentViolet">
+<footer class="<?php echo 'background-' . $backgroundMenu;  ?>">
 
     <div class="footer-content-wrapper">
     
@@ -50,11 +56,8 @@
 
 
 
-
-        <div class="clearfix"></div>
-
             <?php
-        $color = get_field('wa_mascottes_choice_candidates', 'option');
+        $color = get_field('wa_mascottes_candidates_footer', 'option');
 
         $mascotte = 'WA-' . $color . '.png';
                     ?>
