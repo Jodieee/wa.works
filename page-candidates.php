@@ -54,7 +54,63 @@ include('menu-candidates.php');
     
     
      <div id="candidates_candidates_wrapper" class="background-BrinkPink">
-    <div class="content"> </div>
+    <div class="content">
+        
+        <h1>Candidates</h1>
+        
+        <?php
+        $i = 0;
+         
+        
+        if( have_rows('reviews_repeater') ){ 
+        
+         while ( have_rows('reviews_repeater') ) { 
+             
+             the_row();
+             $i++;
+             $image = get_sub_field('reviews-img');
+             $review = get_sub_field('review');
+             $person = get_sub_field('review_written_by');
+        
+             
+             
+        ?>
+        
+        
+         <div class="candidates-companies-reviews">
+             
+            
+             <div class="candidates-companies-reviews-wrap">
+                 <div class="candidates-companies-reviews-img float-left" style="background-image: url(<?php echo $image['url']; ?>); background-size:cover;  background-position: center; "></div>
+                 <div class="candidates-companies-reviews-review float-left">
+                     
+                     <h3><?php echo $review; ?></h3>
+                     <h4><?php echo $person; ?></h4>
+                 
+                 </div>
+                 
+                
+             </div>
+             
+             
+             <?php
+                                                     
+                }
+             }
+        ?>
+             <div class="clearfix"></div>
+
+
+             <div class="button-reviews background-FuchsiaBlue">
+                <a class="button-reviews background-FuchsiaBlue" href="https://app.wa.works/?_ga=2.90907738.1905780514.1538982210-398959901.1535446834">Become one</a> 
+             </div>
+
+        
+         </div>
+         
+         
+         
+         </div>
     </div>
     <div class="wigglyline-svg"></div>
        <div id="candidates_listings_wrapper" class="background-Broom">

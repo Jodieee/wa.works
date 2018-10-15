@@ -69,9 +69,63 @@
             }
     
      #candidates_candidates_wrapper{
-        height:700px;
+        height:1024px;
+         padding-bottom:80px;
+         
          
             .content{
+                
+                h1{
+                    color:white;
+                    margin-top:0px;
+                }
+                
+                .candidates-companies-reviews{
+                    width:750px;
+                    height:500px;
+                    display:block;
+                    margin-left:auto;
+                    margin-right:auto;
+                    margin-bottom:80px;
+                    
+                    .candidates-companies-reviews-wrap{
+                        max-width:750px;
+                        height:auto;
+                    
+                    .candidates-companies-reviews-img{
+                        background:blue;
+                        width:250px;
+                        height:250px;
+                        
+                    }
+                    
+                    .candidates-companies-reviews-review{
+                        background:pink;
+                        width:250px;
+                        height:250px;
+                        
+                    }
+                        
+                        
+                 }
+                    
+                    a.button-reviews{
+                        text-decoration: none;
+                        color:white;
+                        font-family: "bree", sans-serif;
+                        margin:0 auto;
+                    }
+                    div.button-reviews{
+                        width:275px;
+                        height:75px;
+                        border-radius: 8px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;
+                        margin-top:80px;
+                        margin-bottom:80px;
+                    }
+                }
             
         }
           
