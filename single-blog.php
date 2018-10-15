@@ -35,6 +35,8 @@ $catagory = get_field('catagory_blogpost');
 
   
    <main>
+       
+       <div class="content blogpost-container">
         <?php if( have_rows('blogpost_items') ) :
        while ( have_rows('blogpost_items') ) : the_row();
            get_template_part( 'template-parts/content');
@@ -43,7 +45,7 @@ $catagory = get_field('catagory_blogpost');
    endif;   
     ?>
        
-
+</div>
 </main>
 
 

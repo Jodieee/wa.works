@@ -1,5 +1,3 @@
-
-
 <?php
 
     $text = get_sub_field('paragraph_blogpost');
@@ -17,4 +15,8 @@
     }
 
 ?>
+
+
+
+
 

@@ -39,10 +39,15 @@ include('menu-candidates.php');
     
 </div>
     
+<h1 class="how-does-it-work-h1">How does it work?</h1>
     
     <div class="triangle-violentviolet-svg"></div>
        <div id="candidates_how_does_it_work_wrapper" class="<?php echo 'background-' . $backgroundHow;  ?>">
-           <div class="content"> </div>
+           <div class="content"> 
+        
+           
+           
+           </div>
     
   
     
@@ -50,7 +55,7 @@ include('menu-candidates.php');
     
     </div>
     
-    <div class="saw-svg"></div>
+    <div class="wigglyline-svg rotate-svg"></div>
     
     
      <div id="candidates_candidates_wrapper" class="background-BrinkPink">
@@ -59,8 +64,6 @@ include('menu-candidates.php');
         <h1>Candidates</h1>
         
         <?php
-        $i = 0;
-         
         
         if( have_rows('reviews_repeater') ){ 
         
@@ -112,20 +115,94 @@ include('menu-candidates.php');
          
          </div>
     </div>
-    <div class="wigglyline-svg"></div>
+    <div class="saw-svg"></div>
        <div id="candidates_listings_wrapper" class="background-Broom">
-    <div class="content"> </div>
+    <div class="content"> 
+           <h1>Listings</h1>
+        
+           
+           
+           
+           
+           </div>
+    </div>
+    <div class="wigglyline-svg rotate-svg"></div>
+    
+    <div id="candidates_blog_wrapper" class="background-SeaBuckthorn">
+    <div class="content"> 
+        <h1>Blog</h1>
+        
+        
+             <?php
+$args = array(
+    'posts_per_page' => '-1', //-1 betekend eindeloos alle posts laten zien
+    'post_type' => 'blog',
+    'orderby' => 'publish_date',
+    'order' => 'DESC'
+);
+//init WP_Query
+$query = new WP_Query( $args );
+
+//The loop
+if  ( $query->have_posts() ) {
+    
+        ?>
+
+        <div>
+
+        <?php
+    while ( $query->have_posts() ) { $query->the_post();
+                                    
+       $header = get_field('header_blogpost'); 
+       $title = get_field('title_blogpost'); 
+       $catagory = get_field('catagory_blogpost');
+?>
+
+            
+    
+    <a class="blog-home" style="background-image: url(<?php echo $header['url']; ?>); background-size:cover;"  href="<?php the_permalink(); ?>">
+        
+        <?php
+        if( !empty($title) ){ ?>
+        
+        
+        <h1 class="<?php echo 'background-' . $catagory;  ?>"><?php echo $title; ?></h1>
+        
+        
+        <?php } ?>
+            <?php
+            }
+         the_content(); ?>
+            
+        
+    </a>
+    <?php
+            }
+    
+     
+        
+    ?>
+                
+ </div> <!--.container sluit hier af -->
+<?php
+
+// Reset Post Data
+wp_reset_postdata();
+
+    
+?>
+        
+        </div>
     </div>
     <div class="saw-svg"></div>
     
-    <div id="candidates_blog_wrapper" class="background-SeaBuckthorn">
-    <div class="content"> </div>
-    </div>
-    <div class="wigglyline-svg"></div>
-    
     
     <div id="candidates_team_wrapper" class="background-Shamrock">
-    <div class="content"> </div>
+    <div class="content"> 
+        
+        <h1> Meet the epic team</h1>
+        
+        </div>
     </div>
     
 
