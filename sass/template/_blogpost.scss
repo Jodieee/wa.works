@@ -22,9 +22,16 @@ div.block.image{
 }
 
 iframe{
+        width:640px;
+        height:360px;
             margin-left:50%;
             transform: translate(-50%);
                 }
+
+div.block.text.introduction-paragraph{
+    font-style: italic;
+    margin-bottom:20px;
+}
 
 div.blogpost-container{
     max-width:850px;
@@ -85,4 +92,218 @@ div.content{
     margin-top: 80px;}
 }
 }
+
+
+
+@media screen and (max-width: 600px) {
+    header{
+        height:200px;
+        
+        h1{
+            font-size:18px;
+            line-height: 20px;
+            margin-top: -30px;
+        }
+    }
+    
+    
+    div.content.blogpost-container{
+        max-width:330px;
+        margin:20px;
+        padding-top:0px;
+        
+        
+        div.block.image{
+            width:300px;
+            height:auto;
+        }
+
+        div.block.video{
+            width:300px!important;
+            height:auto!important;
+        }
+        
+        iframe{
+        width:300px;
+        height:169px;
+            margin-left:50%;
+            transform: translate(-50%);
+                }
+        
+         div.block.text{
+            p{
+                line-height: 20px;
+                font-size:14px;
+            }
+            
+        }
+        
+    }
+    
+    .previous-next-blogposts{
+        .thumb-next{
+            width:150px;
+            height:auto;
+            
+            h1{
+                font-size:14px;
+                padding:5px;
+            }
+        }
+        .thumb-previous{
+             width:150px;
+            height:auto;
+            
+            h1{
+                font-size:14px;
+                padding:5px;
+                
+            }
+        }
+    }
+    
+    
+}
+
+@media screen and (max-width: 900px) {
+    header{
+        height:300px;
+        
+        h1{
+            font-size:22px;
+            line-height: 30px;
+            margin-top: -30px;
+        }
+    }
+    
+    
+    div.content.blogpost-container{
+        max-width:450px;
+        padding-top:0px;
+        
+        
+        div.block.image{
+            width:400px;
+            height:auto;
+        }
+
+        div.block.video{
+            width:400px!important;
+            height:auto!important;
+        }
+        
+        iframe{
+        width:400px;
+        height:225px;
+            margin-left:50%;
+            transform: translate(-50%);
+                }
+        
+         div.block.text{
+            p{
+                line-height: 20px;
+                font-size:14px;
+            }
+            
+        }
+        
+    }
+    
+    .previous-next-blogposts{
+        .thumb-next{
+            width:150px;
+            height:auto;
+            
+            h1{
+                font-size:14px;
+                padding:5px;
+            }
+        }
+        .thumb-previous{
+             width:150px;
+            height:auto;
+            
+            h1{
+                font-size:14px;
+                padding:5px;
+                
+            }
+        }
+    }
+    
+    
+}
+
+
+@media screen and (max-width: 1200px) {
+    header{
+        height:400px;
+        
+        h1{
+            font-size:26px;
+            line-height: 40px;
+            margin-top: -30px;
+        }
+    }
+    
+    
+    div.content.blogpost-container{
+        max-width:800px;
+        padding-top:0px;
+        
+        
+        div.block.image{
+            width:500px;
+            height:auto;
+        }
+
+        div.block.video{
+            width:500px!important;
+            height:auto!important;
+        }
+        
+        iframe{
+        width:500px;
+        height:281px;
+            margin-left:50%;
+            transform: translate(-50%);
+                }
+        
+         div.block.text{
+            p{
+                line-height: 20px;
+                font-size:14px;
+            }
+            
+        }
+        
+    }
+    
+    .previous-next-blogposts{
+        .thumb-next{
+            width:250px;
+            height:250px;
+            
+            h1{
+                font-size:18px;
+                padding:10px;
+            }
+        }
+        .thumb-previous{
+             width:250px;
+            height:250px;
+            
+            h1{
+                font-size:18px;
+                padding:10px;
+                
+            }
+        }
+    }
+    
+    
+}
+
+
+
 
